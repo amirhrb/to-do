@@ -1,151 +1,145 @@
-*::-webkit-scrollbar{
-    /* border: solid; */
-    display:none;
+*::-webkit-scrollbar {
+  /* border: solid; */
+  display: none;
 }
 /* html{
     width: 100vw;
 } */
-body{
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    background: rgb(68, 62, 62);
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background: rgb(68, 62, 62);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+button {
+  /* display: inline-block; */
+  width: 3rem;
+  border: hidden;
+  border-radius: 50%;
+  height: 5vh;
+  font-size: x-large;
+  background: inherit;
+}
+.side-div {
+  height: 100vh;
+  min-width: 3rem;
+  padding-top: 5rem;
+  background: rgb(194, 156, 156);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.side-div button {
+  margin-top: 1.5rem;
+}
+.side-div button i {
+  color: rgb(68, 62, 62);
+}
+.side-div button i:hover {
+  color: rgb(99, 99, 99);
+}
+.removeAll i:hover {
+  color: darkred !important;
+}
+.main-div {
+  width: 100vw;
+  height: 100vh;
+  margin-right: 0;
+  overflow-y: scroll;
+  /* background-color: ; */
+  display: grid;
 
-}
-button{
-    /* display: inline-block; */
-    width: 3rem;
-    border: hidden;
-    border-radius: 50%;
-    height: 5vh;
-    font-size: x-large;
-    background: inherit;
-}
-.side-div{
-    height: 100vh;
-    min-width: 3rem;
-    padding-top:5rem;
-    background: rgb(194, 156, 156);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:flex-start;
-}
-.side-div button{
-    margin-top:1.5rem;
-}
-.side-div button i{
-color: rgb(68, 62, 62);
-}
-.side-div button i:hover{
-    color: rgb(99, 99, 99);
-}
-.removeAll i:hover{
-    color: darkred !important
-}
-.main-div{
-    width: 100vw;
-    height: 100vh;
-    margin-right: 0;
-    overflow-y: scroll;
-    /* background-color: ; */
-    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 250px));
 
-    grid-template-columns:
-     repeat(auto-fit,minmax(120px,250px));
-
-    grid-template-rows:
-    repeat(auto-fit,minmax(100px,150px));
-    /* grid-gap: 15px; */
+  grid-template-rows: repeat(auto-fit, minmax(100px, 150px));
+  /* grid-gap: 15px; */
 }
-.inputtodo{
-    margin:4.2rem 25px 25px 25px;
-    border-radius: 8px;
-    max-width: 10rem;
-    height: 20px;
-    overflow: scroll;
-    border: none;
+.inputTodo {
+  margin: 4.2rem 25px 25px 25px;
+  border-radius: 8px;
+  max-width: 10rem;
+  height: 20px;
+  overflow: scroll;
+  border: none;
 }
-.inputtodo:focus{
-border: none;
+.inputTodo:focus {
+  border: none;
 }
-.inputtodo::-webkit-input-placeholder{
-    user-select: none;
-   text-align: center;
+.inputTodo::-webkit-input-placeholder {
+  user-select: none;
+  text-align: center;
 }
-.items{
-/* width: 250px; */
-min-height: 50px;
-position: relative;
-display: flex;
-justify-content: flex-start;
-align-items: center;
-border-radius: 8px;
-margin:50px 25px 25px 25px;
-background: rgb(194, 156, 156);
-font-weight: bold;
-color: rgb(161, 2, 2);
-
+.item {
+  /* width: 250px; */
+  min-height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 8px;
+  margin: 50px 25px 25px 25px;
+  background: rgb(194, 156, 156);
+  font-weight: bold;
+  color: rgb(161, 2, 2);
 }
-.items:hover{
-    background: rgb(224, 186, 186);
+.item:hover {
+  background: rgb(224, 186, 186);
 }
-.toDoText{
-    user-select: none;
-    margin:auto 25px;
-    color: rgb(68, 62, 62);
+.toDoText {
+  user-select: none;
+  margin: auto 25px;
+  color: rgb(68, 62, 62);
 }
-.item-btn{
-    min-width:5px;
-    position: absolute;
-    background: transparent;
-    color: rgb(194, 156, 156);
-    right: 10px;
-    top: -30px;
+.item-btn {
+  min-width: 5px;
+  position: absolute;
+  background: transparent;
+  color: rgb(194, 156, 156);
+  right: 10px;
+  top: -30px;
 }
 
-.fa-minus-circle{
-    width: 25px;
-    height: 25px;
+.fa-minus-circle {
+  width: 25px;
+  height: 25px;
 }
-.fa-minus-circle:hover{
-color: rgb(250, 61, 61);
-}
-
-.fa-minus-circle:hover::before{
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: rgb(255, 255, 255);
+.fa-minus-circle:hover {
+  color: rgb(250, 61, 61);
 }
 
+.fa-minus-circle:hover::before {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+}
 
-
-.fa-pen-nib{
-    right: 45px !important;
-    top: -32px;
+.fa-pen-nib {
+  right: 45px !important;
+  top: -32px;
 }
-.fa-pen-nib:hover{
-color: rgb(236, 244, 252);
+.fa-pen-nib:hover {
+  color: rgb(236, 244, 252);
 }
-.fa-checkBtn{
-    width: 20px;
-    max-height: 20px;
-    position: absolute;
-    padding:0;
-    right: -20px;
-    top: 25px;
-    border-radius: 50%;
-    font-size: large !important;
-    background: rgb(194, 156, 156);
-    color: rgb(68, 62, 62);
+.fa-checkBtn {
+  width: 20px;
+  max-height: 20px;
+  position: absolute;
+  padding: 0;
+  right: -20px;
+  top: 25px;
+  border-radius: 50%;
+  font-size: large !important;
+  background: rgb(194, 156, 156);
+  color: rgb(68, 62, 62);
 }
-.fa-checkBtn:hover{
-    background: rgb(255, 255, 255);
-    padding:0;  
-    color: rgba(55, 165, 88,0.8);
+.fa-checkBtn:hover {
+  background: rgb(255, 255, 255);
+  padding: 0;
+  color: rgba(55, 165, 88, 0.8);
 }
